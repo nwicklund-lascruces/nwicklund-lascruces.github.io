@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+      	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <title></title>
+        
+        <!--[if IE]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    	<style>
+        /* html,
+        body,
+        #viewDiv {
+          height: 100%;
+          width: 700px;
+          border: 1px solid #000000
+      	} */
+        #printbutton
+        {
+          position: absolute;
+          left: 608px;
+          top: 955px;
+          z-index: 101;
+        }
+        #div1
+        {
+          width: 700px;
+          height: 75px;
+          
+          border: 1px solid #000000
+        }
+        li.vendortext
+        {
+          position: absolute;
+          left: 37px;
+          top: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.foodtrucktext
+        {
+          position: absolute;
+          left: 86px;
+          top: 59px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.entrancetext
+        {
+          position: absolute;
+          left: 127px;
+          top: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.exittext
+        {
+          position: absolute;
+          left: 184px;
+          top: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.emergencyexittext
+        {
+          position: absolute;
+          left: 223px;
+          top: 59px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.securitytext
+        {
+          position: absolute;
+          left: 267px;
+          top: 59px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.fireextinguishertext
+        {
+          position: absolute;
+          left: 325px;
+          top: 59px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.jumpingballoontext
+        {
+          position: absolute;
+          left: 359px;
+          top: 59px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.portapottiestext
+        {
+          position: absolute;
+          left: 413px;
+          top: 59px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.alcoholboothstext
+        {
+          position: absolute;
+          left: 455px;
+          top: 59px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.tabletext
+        {
+          position: absolute;
+          left: 507px;
+          top: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.dumpstertext
+        {
+          position: absolute;
+          left: 544px;
+          top: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.signagetext
+        {
+          position: absolute;
+          left: 603px;
+          top: 65px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+        li.roadclosuretext
+        {
+          position: absolute;
+          left: 642px;
+          top: 59px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          font-size: 12px;
+        }
+    	li.vendorstyle 
+    	{ 
+          position:  absolute;
+          left: 41.666667px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/vMD7DPE.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.foodtruckstyle 
+    	{ 
+          position:  absolute;
+          left: 88.333333px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/coSNSHp.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.entrancestyle 
+    	{ 
+          position:  absolute;
+          left: 135px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/Fju6ohJ.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.exitstyle 
+    	{ 
+          position:  absolute;
+          left: 181.666667px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/gOg1fBC.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.emergencyexitstyle 
+    	{ 
+          position:  absolute;
+          left: 228.333333px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/aJBbYtQ.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.securityguardstyle 
+    	{ 
+          position:  absolute;
+          left: 275px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/E6Q1mne.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.fireextinguisherstyle 
+    	{ 
+          position:  absolute;
+          left: 321.666667px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/3X5DeTX.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.jumpingballoonstyle 
+    	{ 
+          position:  absolute;
+          left: 368.333333px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/vqLTtXa.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.portapottiesstyle 
+    	{ 
+          position:  absolute;
+          left: 415px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/lcHCj2z.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.alcoholboothstyle 
+    	{ 
+          position:  absolute;
+          left: 461.666667px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/0tOgLMe.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.tablestyle 
+    	{ 
+          position:  absolute;
+          left: 508.333333px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/r033Tyw.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.dumpsterstyle 
+    	{ 
+          position:  absolute;
+          left: 555px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/JZ4libA.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.signagestyle 
+    	{ 
+          position:  absolute;
+          left: 601.666667px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/p8lQniW.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        li.roadclosurestyle 
+    	{ 
+          position:  absolute;
+          left: 648.333333px;
+          top: 30px; /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+          width: 25px;
+          height: 25px;
+          background-image: url(https://i.imgur.com/PlFvdBG.png);
+          background-size: 100%;
+          cursor: grab;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          font-weight: bold;
+          font-size: 10px;
+          z-index: 100;
+    	}
+        #image-container
+        {
+          position: relative;
+    	  width: 700px;
+    	  height: 882px;
+      	  background-image: url("https://i.imgur.com/UchmIVP.png"); /* Replace with your image URL */
+      	  background-size: cover;
+    	  border: 1px solid #ccc;
+        }
+    	</style>
+       
+    <!-- <script src="https://js.arcgis.com/4.32/"></script> -->
+    	<script>
+        	// require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
+        	  // const map = new Map({
+          	  	// basemap: "topo-vector"
+        	  // });
+
+        	  // const view = new MapView({
+          	  	// container: "viewDiv",
+          	  	// map: map,
+          	  	// zoom: 4,
+          	  	// center: [15, 65] // longitude, latitude
+        	  // });
+      		// });
+            
+            function drag_start(event) {
+                var style = window.getComputedStyle(event.target, null);
+                var str = (parseInt(style.getPropertyValue("left")) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top")) - event.clientY) + ',' + event.target.id;
+                event.dataTransfer.setData("Text", str);
+            }
+
+            function drop(event) {
+                var offset = event.dataTransfer.getData("Text").split(',');
+                var dm = document.getElementById(offset[2]);
+                dm.style.left = (event.clientX + parseInt(offset[0], 10)) + 'px';
+                dm.style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
+                event.preventDefault();
+                return false;
+            }
+
+            function drag_over(event) {
+                event.preventDefault();
+                return false;
+            }
+    	</script>
+      </head>
+      <body ondragover="drag_over(event)" ondrop="drop(event)">
+       <ul>
+              <li class="vendorstyle" id="vendor1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor50" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor51" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor52" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor53" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor54" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor55" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor56" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor57" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor58" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor59" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor60" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor61" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor62" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor63" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor64" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor65" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor66" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor67" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor68" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor69" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor70" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor71" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor72" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor73" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor74" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor75" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor76" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor77" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor78" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor79" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor80" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor81" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor82" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor83" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor84" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor85" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor86" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor87" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor88" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor89" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor90" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor91" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor92" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor93" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor94" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor95" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor96" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor97" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor98" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor99" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor100" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor101" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor102" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor103" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor104" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor105" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor106" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor107" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor108" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor109" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor110" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor111" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor112" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor113" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor114" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor115" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor116" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor117" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor118" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor119" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor120" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor121" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor122" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor123" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor124" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor125" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor126" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor127" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor128" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor129" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor130" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor131" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor132" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor133" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor134" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor135" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor136" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor137" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor138" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor139" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor140" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor141" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor142" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor143" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor144" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor145" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor146" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor147" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor148" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor149" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="vendorstyle" id="vendor150" draggable="true" ondragstart="drag_start(event)"></li>
+      </ul>
+      <ul>
+      		  <li class="foodtruckstyle" id="foodtruck1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="foodtruckstyle" id="foodtruck50" draggable="true" ondragstart="drag_start(event)"></li>
+      </ul>
+      <ul>
+      		  <li class="entrancestyle" id="entrance1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="entrancestyle" id="entrance50" draggable="true" ondragstart="drag_start(event)"></li>
+      </ul>
+      <ul>
+      		  <li class="exitstyle" id="exit1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="exitstyle" id="exit50" draggable="true" ondragstart="drag_start(event)"></li>
+	</ul>
+    <ul>
+    		  <li class="emergencyexitstyle" id="emergencyexit1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="emergencyexitstyle" id="emergencyexit50" draggable="true" ondragstart="drag_start(event)"></li>
+	</ul>
+    <ul>
+    		  <li class="securityguardstyle" id="securityguard1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="securityguardstyle" id="securityguard50" draggable="true" ondragstart="drag_start(event)"></li>
+    </ul>
+    <ul>
+    		 <li class="fireextinguisherstyle" id="fireextinguisher1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="fireextinguisherstyle" id="fireextinguisher50" draggable="true" ondragstart="drag_start(event)"></li> 
+    </ul>
+    <ul>
+    		  <li class="jumpingballoonstyle" id="jumpingballoon1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="jumpingballoonstyle" id="jumpingballoon50" draggable="true" ondragstart="drag_start(event)"></li>
+    </ul>
+    <ul>
+    		  <li class="portapottiesstyle" id="portapotties1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="portapottiesstyle" id="portapotties50" draggable="true" ondragstart="drag_start(event)"></li>
+    </ul>
+    <ul>
+    		  <li class="alcoholboothstyle" id="alcoholbooth1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="alcoholboothstyle" id="alcoholbooth50" draggable="true" ondragstart="drag_start(event)"></li>
+    </ul>
+    <ul>
+    		  <li class="tablestyle" id="table1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="tablestyle" id="table50" draggable="true" ondragstart="drag_start(event)"></li>
+
+    </ul>
+    <ul>
+    		  <li class="dumpsterstyle" id="dumpster1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="dumpsterstyle" id="dumpster50" draggable="true" ondragstart="drag_start(event)"></li>
+    </ul>
+    <ul>
+    		  <li class="signagestyle" id="signage1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage20" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage21" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage22" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage23" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage24" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage25" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage26" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage27" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage28" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage29" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage30" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage31" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage32" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage33" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage34" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage35" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage36" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage37" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage38" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage39" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage40" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage41" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage42" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage43" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage44" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage45" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage46" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage47" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage48" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage49" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="signagestyle" id="signage50" draggable="true" ondragstart="drag_start(event)"></li>
+    </ul>
+    <ul>
+    		  <li class="roadclosurestyle" id="roadclosure1" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure2" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure3" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure4" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure5" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure6" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure7" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure8" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure9" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure10" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure11" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure12" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure13" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure14" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure15" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure16" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure17" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure18" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure19" draggable="true" ondragstart="drag_start(event)"></li>
+              <li class="roadclosurestyle" id="roadclosure20" draggable="true" ondragstart="drag_start(event)"></li>
+    </ul>
+    <ul>
+    		  <li class="vendortext" id="vendortext1" draggable="false">Vendor</li>
+    </ul>
+    <ul>
+    		  <li class="foodtrucktext" id="foodtrucktext1" draggable="false">Food<br>Truck</li>
+    </ul>
+    <ul>
+    		  <li class="entrancetext" id="entrancetext1" draggable="false">Entrance</li>
+    </ul>
+    <ul>
+    		  <li class="exittext" id="exittext1" draggable="false">Exit</li>
+    </ul>
+    <ul>
+    		  <li class="emergencyexittext" id="emergencyexittext1" draggable="false">Emerg.<br>Exit</li>
+    </ul>
+    <ul>
+    		  <li class="securitytext" id="securitytext1" draggable="false">Security<br>Guard</li>
+    </ul>
+    <ul>
+    		  <li class="fireextinguishertext" id="fireextinguishertext1" draggable="false">Fire<br>Ext.</li>
+    </ul>
+    <ul>
+    		  <li class="jumpingballoontext" id="jumpingballoontext1" draggable="false">Jumping<br>Balloon</li>
+    </ul>
+    <ul>
+    		  <li class="portapottiestext" id="portapottiestext1" draggable="false">Porta-<br>Potty</li>
+    </ul>
+    <ul>
+    		  <li class="alcoholboothstext" id="alcoholboothstext1" draggable="false">Alcohol<br>Booth</li>
+    </ul>
+    <ul>
+    		  <li class="tabletext" id="tabletext1" draggable="false">Table</li>
+    </ul>
+    <ul>
+    		  <li class="dumpstertext" id="dumpstertext1" draggable="false">Dumpster</li>
+    </ul>
+    <ul>
+    		  <li class="signagetext" id="signagetext1" draggable="false">Sign</li>
+    </ul>
+    <ul>
+    		  <li class="roadclosuretext" id="roadclosuretext1" draggable="false">Road<br>Closure</li>
+    </ul>
+    	 <div id="printbutton"><button onClick="window.print()">Print This Map</button></div>
+         <div id="div1"></div>
+         <!-- <div id="viewDiv"></div> -->
+      	 <div id="image-container"></div>  
+      </body>
+   </html>
