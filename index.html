@@ -15,6 +15,33 @@
           width: 700px;
           border: 1px solid #000000
       	} */
+        nav
+        {
+          position: relative;
+          width: 700px;
+          height: 20px;
+       
+          border: 1px solid #000000;
+          max-width: 700px;
+          margin: auto;
+          display: flex;
+        }
+        li.nav
+        {
+          position: absolute;
+          left: 65px;
+          list-style: none;
+          display: block;
+          justify-content: space-around;
+          margin-right: 10px;
+        }
+        li.navleft
+        {
+          position: absolute;
+          left: 10px;
+          list-style: none;
+          display: inline-block;
+        }
         #printbutton
         {
           position: absolute;
@@ -503,6 +530,16 @@
     	</script>
       </head>
       <body ondragover="drag_over(event)" ondrop="drop(event)">
+      	<nav>
+            <li class ="navleft">
+                Maps: 
+            </li>
+        	<li class="nav">
+	 			<a href="./index.html">Plaza Map</a>
+                 | 
+				<a href="./downtownimage.html">Downtown Map</a>
+            </li>
+	 </nav>  
        <div id="div1">
        <ul>
               <li class="vendorstyle" id="vendor1" draggable="true" ondragstart="drag_start(event)"></li>
@@ -1350,9 +1387,5 @@
       	 <div id="image-container">
          	<div id="printbutton"><button onClick="window.print()">Print This Map</button></div>
          </div>
-	 <nav>
-	 	<a href="./index.html">Plaza Map</a>
-		<a href="./downtownimage.html">Downtown Map</a>
-	 </nav>  
       </body>
    </html>
